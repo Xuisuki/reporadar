@@ -1,0 +1,17 @@
+Fonts bundled with RepoRadar
+============================
+
+Lato (Lato-Black.ttf, Lato-Bold.ttf, Lato-Semibold.ttf)
+  Designer: Lukasz Dziedzic
+  License: SIL Open Font License, Version 1.1
+  https://fonts.google.com/specimen/Lato/about
+  https://openfontlicense.org/
+
+DejaVu Sans (DejaVuSans.ttf)
+  Based on Bitstream Vera Fonts.
+  License: free, permissive (Bitstream Vera / DejaVu license) — allows
+  bundling, modification and redistribution.
+  https://dejavu-fonts.github.io/License.html
+
+Both licenses permit redistribution of the font files together with this
+software. See the URLs above for full license texts.

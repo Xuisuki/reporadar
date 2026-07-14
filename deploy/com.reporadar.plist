@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- macOS launchd: запуск каждые 3 часа (10800 секунд).
+     Замените /path/to/reporadar и путь к python3, затем:
+       cp deploy/com.reporadar.plist ~/Library/LaunchAgents/
+       launchctl load ~/Library/LaunchAgents/com.reporadar.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.reporadar</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/path/to/reporadar/bot.py</string>
+    <string>run</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/path/to/reporadar</string>
+  <key>StartInterval</key>
+  <integer>10800</integer>
+  <key>StandardOutPath</key>
+  <string>/tmp/reporadar.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/reporadar.err</string>
+</dict>
+</plist>

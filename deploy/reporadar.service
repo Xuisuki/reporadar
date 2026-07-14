@@ -1,0 +1,10 @@
+[Unit]
+Description=RepoRadar - post undervalued GitHub repos to a Telegram channel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# Замените путь на свой каталог с RepoRadar:
+WorkingDirectory=/path/to/reporadar
+ExecStart=/usr/bin/python3 /path/to/reporadar/bot.py run

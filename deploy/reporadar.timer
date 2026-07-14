@@ -1,0 +1,11 @@
+[Unit]
+Description=Run RepoRadar every 3 hours
+
+[Timer]
+# Каждые 3 часа + случайная задержка до 5 минут; Persistent догоняет пропуски.
+OnCalendar=*-*-* 00/3:00:00
+RandomizedDelaySec=300
+Persistent=true
+
+[Install]
+WantedBy=timers.target

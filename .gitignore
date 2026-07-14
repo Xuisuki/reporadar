@@ -1,0 +1,23 @@
+# секреты и локальная конфигурация
+.env
+
+# база и накопленная история
+store.db
+
+# сгенерированные артефакты (в корне; ассеты репо в assets/ коммитятся)
+/card.png
+/preview.png
+/shot_raw
+/tiktok/
+
+# серверные юниты этого инстанса (публикуем обобщённые примеры в deploy/)
+gh-trend-bot.service
+gh-trend-bot.timer
+
+# бэкапы
+*.bak
+*.bak.*
+
+# python
+__pycache__/
+*.pyc
