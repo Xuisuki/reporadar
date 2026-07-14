@@ -44,13 +44,14 @@ Synthetic card (when a repo has no screenshot):
 
 ### How it works
 
-```
-pick rubric + mode (rocket/evergreen)
-  -> GitHub Search within star window
-    -> score candidates (velocity or measured growth)
-      -> LLM judge the top ones (drop below threshold)
-        -> render card (hybrid screenshot if available)
-          -> post to Telegram + remember it (dedup)
+```mermaid
+flowchart LR
+    A[pick rubric + mode<br/>rocket / evergreen] --> B[GitHub Search<br/>within star window]
+    B --> C[score candidates<br/>velocity or measured growth]
+    C --> D{LLM judge 1-10<br/>above threshold?}
+    D -->|no| C
+    D -->|yes| E[render card<br/>hybrid screenshot if any]
+    E --> F[post to Telegram<br/>+ remember / dedup]
 ```
 
 ---
@@ -66,7 +67,7 @@ pick rubric + mode (rocket/evergreen)
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/<owner>/reporadar.git
+git clone https://github.com/Xuisuki/reporadar.git
 cd reporadar
 pip install -r requirements.txt
 cp .env.example .env
@@ -215,6 +216,13 @@ All options live in `.env` (see `.env.example`). Highlights:
 
 ---
 
+## Author
+
+Project **[ProdX](https://prodx.pro)** · dev **[@Xuisuki](https://t.me/Xuisuki)** · [github.com/Xuisuki](https://github.com/Xuisuki)
+
+Questions and ideas — [Issues](https://github.com/Xuisuki/reporadar/issues) or Telegram.
+Grab a versioned build on the [Releases](https://github.com/Xuisuki/reporadar/releases) page.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Bundled fonts keep their own permissive licenses (see `assets/fonts/LICENSES.txt`).
@@ -255,13 +263,14 @@ MIT — see [LICENSE](LICENSE). Bundled fonts keep their own permissive licenses
 
 ### Как работает
 
-```
-выбор рубрики + режима (ракета/вечнозелёный)
-  -> поиск по GitHub в окне звёзд
-    -> оценка кандидатов (velocity или измеренный рост)
-      -> LLM-судья по верхним (отсев ниже порога)
-        -> рендер карточки (гибрид со скриншотом, если есть)
-          -> пост в Telegram + запоминание (дедуп)
+```mermaid
+flowchart LR
+    A[выбор рубрики + режим<br/>ракета / вечнозелёный] --> B[поиск GitHub<br/>в окне звёзд]
+    B --> C[оценка кандидатов<br/>velocity или измеренный рост]
+    C --> D{LLM-судья 1-10<br/>выше порога?}
+    D -->|нет| C
+    D -->|да| E[рендер карточки<br/>гибрид со скриншотом]
+    E --> F[пост в Telegram<br/>+ запоминание / дедуп]
 ```
 
 ---
@@ -277,7 +286,7 @@ MIT — see [LICENSE](LICENSE). Bundled fonts keep their own permissive licenses
 ### 1. Скачать код
 
 ```bash
-git clone https://github.com/<owner>/reporadar.git
+git clone https://github.com/Xuisuki/reporadar.git
 cd reporadar
 pip install -r requirements.txt
 cp .env.example .env
@@ -425,6 +434,13 @@ schtasks /Create /SC HOURLY /MO 3 /TN RepoRadar ^
 - Многовато шума из «хвоста»? Поднимите `NEEDLE_JUDGE_MIN` до `8`.
 
 ---
+
+## Автор
+
+Проект **[ProdX](https://prodx.pro)** · разработчик **[@Xuisuki](https://t.me/Xuisuki)** · [github.com/Xuisuki](https://github.com/Xuisuki)
+
+Вопросы и предложения — [Issues](https://github.com/Xuisuki/reporadar/issues) или в Telegram.
+Версионные сборки — на странице [Releases](https://github.com/Xuisuki/reporadar/releases).
 
 ## Лицензия
 
