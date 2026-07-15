@@ -64,6 +64,23 @@ flowchart LR
 - A **Telegram bot** and a **channel** where it is an admin
 - An **LLM** — local [Ollama](https://ollama.com) (default) or any OpenAI-compatible API
 
+### Quick start — one command
+
+The installer checks Python, creates a virtualenv, installs the dependencies and launches an
+interactive setup wizard. The wizard walks you through every value (bot token, channel, LLM) and
+tells you **where to get each one** — nothing to edit by hand.
+
+```bash
+git clone https://github.com/Xuisuki/reporadar.git
+cd reporadar
+./install.sh            # Linux / macOS   (or: bash install.sh)
+```
+
+On **Windows**: double-click `install.bat`, or run `./install.ps1` in PowerShell.
+
+When it finishes, start the bot with `./run.sh` (Windows: `run.ps1`). To reconfigure later, just run
+`python first_start.py` again. Prefer to set things up by hand? The manual steps below still work.
+
 ### 1. Get the code
 
 ```bash
@@ -218,7 +235,7 @@ All options live in `.env` (see `.env.example`). Highlights:
 
 ## Author
 
-Project **[ProdX](https://prodx.pro)** · dev **[@Xuisuki](https://t.me/Xuisuki)** · [github.com/Xuisuki](https://github.com/Xuisuki)
+Project **[ProdX](https://prodx.pro)** · devs **[@Xuisuki](https://github.com/Xuisuki)** · **[@mawlikow](https://github.com/mawlikow)**
 
 Questions and ideas — [Issues](https://github.com/Xuisuki/reporadar/issues) or Telegram.
 Grab a versioned build on the [Releases](https://github.com/Xuisuki/reporadar/releases) page.
@@ -282,6 +299,23 @@ flowchart LR
 - **Python 3.9+**
 - **Telegram-бот** и **канал**, где бот — администратор
 - **LLM** — локальная [Ollama](https://ollama.com) (по умолчанию) или любой OpenAI-совместимый API
+
+### Быстрый старт — одной командой
+
+Установщик проверит Python, создаст виртуальное окружение, поставит зависимости и запустит
+интерактивный мастер настройки. Мастер проведёт по каждому значению (токен бота, канал, LLM) и
+подскажет, **где что взять** — руками ничего править не нужно.
+
+```bash
+git clone https://github.com/Xuisuki/reporadar.git
+cd reporadar
+./install.sh            # Linux / macOS   (или: bash install.sh)
+```
+
+На **Windows**: двойной клик по `install.bat`, либо `./install.ps1` в PowerShell.
+
+После установки запуск бота: `./run.sh` (Windows: `run.ps1`). Перенастроить позже — снова
+`python first_start.py`. Хотите настроить вручную? Ручные шаги ниже по-прежнему работают.
 
 ### 1. Скачать код
 
@@ -437,7 +471,7 @@ schtasks /Create /SC HOURLY /MO 3 /TN RepoRadar ^
 
 ## Автор
 
-Проект **[ProdX](https://prodx.pro)** · разработчик **[@Xuisuki](https://t.me/Xuisuki)** · [github.com/Xuisuki](https://github.com/Xuisuki)
+Проект **[ProdX](https://prodx.pro)** · разработчики **[@Xuisuki](https://github.com/Xuisuki)** · **[@mawlikow](https://github.com/mawlikow)**
 
 Вопросы и предложения — [Issues](https://github.com/Xuisuki/reporadar/issues) или в Telegram.
 Версионные сборки — на странице [Releases](https://github.com/Xuisuki/reporadar/releases).
